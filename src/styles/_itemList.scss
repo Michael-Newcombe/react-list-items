@@ -1,0 +1,38 @@
+@import './helpers';
+
+.list-container{
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+}
+
+.list-item-container{
+  @include flex-row();
+  margin-bottom: 32px;
+  width: 596px;
+}
+
+.list-item{
+  width: 100%;
+  list-style-type: none;
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 4px;
+  color: #030c14;
+  background: #fff;
+  filter: drop-shadow(1px 1px 5px rgba(#04D4F0,0.5));
+}
+
+.delete-icon{
+  @include removeDefaultBtnStyle();
+  background: none;
+  margin-left: 16px;
+  img{
+    width: 32px;
+  }
+}
+.delete-icon:focus{
+  outline: none;
+}
+

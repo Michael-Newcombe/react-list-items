@@ -1,0 +1,29 @@
+@import './helpers';
+
+.add-item-btn {
+  @include addItemBtnStyle();
+}
+
+.add-item-btn:focus{
+  outline: none;
+  filter: drop-shadow(0px 1px 15px rgba(#2cbb63,0.5));
+}
+
+.item-input-field{
+  padding: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+}:focus{
+  outline: 2px solid rgba(#04D4F0, 0.75);
+  filter: drop-shadow(1px 1px 10px rgba(#04D4F0,0.75));
+}::placeholder{
+  font-size: 16px;
+}
+
+.error-message-container{
+  color: #ff4742;
+  opacity: 0;
+  animation: fade-in 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards;
+}
+

@@ -1,0 +1,32 @@
+@mixin removeDefaultBtnStyle {
+  text-decoration: none;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+@mixin flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin addItemBtnStyle{
+  @include removeDefaultBtnStyle();
+  @include flex-row();
+  margin-top: 32px;
+  background-color: #c2fbd7;
+  width: 100%;
+  filter: drop-shadow(0px 1px 15px rgba(#2cbb63,0.5));
+  border-radius: 4px;
+  color: green;
+  display: inline-block;
+  padding: 16px 0;
+  font-size: 16px;
+  img{
+    width: 32px;
+  }
+}
